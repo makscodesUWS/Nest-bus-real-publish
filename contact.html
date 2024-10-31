@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nest+m to UWS Bus - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nest+m to UWS Bus</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Updates.html">Updates</a></li>
+        <li><a href="fares.html">Fares</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="riders.html">Riders</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="parent.html">Parent</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="Aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section id="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Phone:</strong> (555) 555-5555</p>
+      <p><strong>Email:</strong> nestwestsidebus@gmail.com</p>
+      <p><strong>Address:</strong> 123 Main Street, New York, NY 10001</p>
+    </section>
+  </main>
+
+  <script>
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent page reload
+
+      // Get form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Save contact request to local storage
+      let contactRequests = JSON.parse(localStorage.getItem('contactRequests')) || [];
+      contactRequests.push({ name, email, message });
+      localStorage.setItem('contactRequests', JSON.stringify(contactRequests));
+
+      alert('Message sent successfully!');
+      contactForm.reset(); // Clear the form
+    });
+  </script>
+</body>
+</html>

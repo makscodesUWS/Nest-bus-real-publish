@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nest+m to UWS Bus - Add Rider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nest+m to UWS Bus</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Updates.html">Updates</a></li>
+        <li><a href="fares.html">Fares</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="riders.html">Riders</a></li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="parent.html">Parent</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="Aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="add-rider-form">
+      <h2>Add Your Child</h2>
+      <form id="rider-form">
+        <label for="child-name">Child's Name:</label>
+        <input type="text" id="child-name" name="child-name" required>
+
+        <label for="child-stop">Child's Stop:</label>
+        <select id="child-stop" name="child-stop">
+          <option value="Nest+m">Nest+m</option>
+          <option value="Columbus Circle">Columbus Circle</option>
+          <option value="Lincoln Center">Lincoln Center</option>
+          <option value="Amsterdam Avenue & 96th Street">Amsterdam Avenue & 96th Street</option>
+          <option value="UWS">UWS</option>
+        </select>
+
+        <label for="parent-code">Parent Code:</label>
+        <input type="text" id="parent-code" name="parent-code" required>
+
+        <button type="submit">Add Rider</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
